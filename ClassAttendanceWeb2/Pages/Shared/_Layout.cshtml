@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Närvarolistan.nu</title>
+    <link rel="icon" href="~/logga.png" >
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://kit.fontawesome.com/53c6caddf7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-toggleable-sm bg-success navbar-dark border-bottom box-shadow mb-3 sticky-top">
+        <div class="container font-weight-bold bg-success ">
+            <a class="navbar-brand" asp-area="" asp-page="/Index"><div class="">Närvarolistan.nu</div></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark btn btn-warning btn-sm" asp-area="" asp-page="/">Starta om</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+        <hr />
+
+        <footer>
+      
+            @RenderSection("footer", required: false)
+            <p>&copy; 2019 - Närvarolistan.nu</p>
+        
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

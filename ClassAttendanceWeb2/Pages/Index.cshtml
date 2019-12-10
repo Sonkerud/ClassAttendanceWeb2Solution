@@ -1,0 +1,12 @@
+﻿@page
+@using ClassAttendanceWeb2.Components
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+@(await Html.RenderComponentAsync<Students>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
